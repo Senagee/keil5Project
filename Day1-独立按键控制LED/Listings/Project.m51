@@ -1,0 +1,130 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        12/15/2023  12:33:38  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+D:\KEIL5\C51\BIN\BL51.EXE .\Objects\main.obj TO .\Objects\Project PRINT (.\Listings\Project.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\main.obj (MAIN)
+  D:\KEIL5\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\Project (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0018H     UNIT         ?PR?LIGHT3?MAIN
+            CODE    001BH     0014H     UNIT         ?PR?_DELAYXMS?MAIN
+            CODE    002FH     000CH     UNIT         ?C_C51STARTUP
+            CODE    003BH     000BH     UNIT         ?PR?LIGHT1?MAIN
+            CODE    0046H     0003H     UNIT         ?PR?MAIN?MAIN
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\Project (MAIN)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?MAIN
+
+?PR?MAIN?MAIN
+  +--> ?PR?LIGHT3?MAIN
+
+?PR?LIGHT3?MAIN
+  +--> ?PR?_DELAYXMS?MAIN
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\Project (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  B:00A0H.0       PUBLIC        P2_0
+  B:00B0H.1       PUBLIC        P3_1
+BL51 BANKED LINKER/LOCATER V6.22                                                      12/15/2023  12:33:38  PAGE 2
+
+
+  C:0046H         PUBLIC        main
+  C:003BH         PUBLIC        light1
+  C:001BH         PUBLIC        _Delayxms
+  C:0003H         PUBLIC        light3
+  -------         PROC          _DELAYXMS
+  D:0006H         SYMBOL        xms
+  -------         DO            
+  D:0005H         SYMBOL        i
+  D:0004H         SYMBOL        j
+  -------         ENDDO         
+  C:001BH         LINE#         4
+  C:001BH         LINE#         5
+  C:001BH         LINE#         8
+  C:001FH         LINE#         9
+  C:001FH         LINE#         10
+  C:0021H         LINE#         11
+  C:0023H         LINE#         13
+  C:0023H         LINE#         14
+  C:0025H         LINE#         15
+  C:0027H         LINE#         16
+  C:002CH         LINE#         17
+  C:002EH         LINE#         19
+  -------         ENDPROC       _DELAYXMS
+  -------         PROC          LIGHT1
+  C:003BH         LINE#         22
+  C:003BH         LINE#         23
+  C:003BH         LINE#         24
+  C:003BH         LINE#         25
+  C:003BH         LINE#         26
+  C:003EH         LINE#         27
+  C:003EH         LINE#         28
+  C:0040H         LINE#         29
+  C:0042H         LINE#         31
+  C:0042H         LINE#         32
+  C:0044H         LINE#         33
+  C:0044H         LINE#         34
+  -------         ENDPROC       LIGHT1
+  -------         PROC          LIGHT3
+  C:0003H         LINE#         58
+  C:0003H         LINE#         59
+  C:0003H         LINE#         60
+  C:0003H         LINE#         61
+  C:0003H         LINE#         62
+  C:0006H         LINE#         63
+  C:0006H         LINE#         64
+  C:000DH         LINE#         65
+  C:0010H         LINE#         66
+  C:0017H         LINE#         68
+  C:0019H         LINE#         69
+  C:0019H         LINE#         70
+  -------         ENDPROC       LIGHT3
+  -------         PROC          MAIN
+  C:0046H         LINE#         73
+  C:0046H         LINE#         74
+  C:0046H         LINE#         77
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+BL51 BANKED LINKER/LOCATER V6.22                                                      12/15/2023  12:33:38  PAGE 3
+
+
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LIGHT1?MAIN
+
+Program Size: data=9.0 xdata=0 code=73
+LINK/LOCATE RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
