@@ -176,7 +176,7 @@
           </Flash1>
           <bUseTDR>0</bUseTDR>
           <Flash2></Flash2>
-          <Flash3></Flash3>
+          <Flash3>"" ()</Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
           <pFcarmGrp></pFcarmGrp>
@@ -230,7 +230,7 @@
               <RCB>
                 <Type>0</Type>
                 <StartAddress>0x0</StartAddress>
-                <Size>0x10000</Size>
+                <Size>0xffff</Size>
               </RCB>
               <RXB>
                 <Type>0</Type>
@@ -335,7 +335,7 @@
             <DataOverlaying>1</DataOverlaying>
             <OverlayString></OverlayString>
             <MiscControls></MiscControls>
-            <DisableWarningNumbers></DisableWarningNumbers>
+            <DisableWarningNumbers>16</DisableWarningNumbers>
             <LinkerCmdFile></LinkerCmdFile>
             <Assign></Assign>
             <ReserveString></ReserveString>
@@ -369,6 +369,16 @@
               <FilePath>.\main.c</FilePath>
             </File>
             <File>
+              <FileName>LCD1602.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\LCD1602.c</FilePath>
+            </File>
+            <File>
+              <FileName>LCD1602.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\LCD1602.h</FilePath>
+            </File>
+            <File>
               <FileName>Delay.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Delay.c</FilePath>
@@ -377,16 +387,6 @@
               <FileName>Delay.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Delay.h</FilePath>
-            </File>
-            <File>
-              <FileName>lightOn.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\lightOn.c</FilePath>
-            </File>
-            <File>
-              <FileName>lightOn.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\lightOn.h</FilePath>
             </File>
           </Files>
         </Group>
